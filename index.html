@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title>ORIGAMI</title>
   </head>
+
   <body>
-    <h1>WELCOME TO ORIGAMI WEBSITE</h1>
-    <a href="#">ABOUT US</a>
-    <a href="#">FOLLOW US</a>
-    <br>
-    <img src="download.jpeg" onclick="window.location = 'https://www.youtube.com/watch?v=VMnaXwivfDs'">
-    <h2>FACTS ABOUT ORIGAMI</h2>
+    
+  
+    <div class="img">
+      <h1>Welcome To Origami website</h1>
+      <img src='img.jpeg' alt="">
+    </div>
+    
+    <div class="facts">
+      <h1>FACTS ABOUT ORIGAMI</h1>
     <ol>
       <li>Origami is derived from two Japanese words: Ori (folded) and Kami (paper).</li>
       <li>Origami is the art of paper folding, which is often associated with Japanese culture.</li>
       <li>Origami is an ancient art form that is believed to have been around for nearly 2000 years.</li>
     </ol>
-    <h2>FAMOUS ARTIST</h2>
+    </div>
+
+    <div class="artists">
+      <h1>FAMOUS ARTISTS</h1>
     <ul>
       <li>Robert J Lang</li>
       <li>Nick Robinson</li>
       <li>Martin Dmaine</li>
     </ul>
+    </div>
+    <div id="prg"></div>
+    <div id="scroll"></div>
+    <script type="text/javascript">
+      let progress = document.getElementById("prg");
+      let tlheight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function() {
+        let height = (window.pageYOffset / tlheight) * 100;
+        progress.style.height = height + "%";
+      }
+    </script>
+   
   </body>
 </html>
